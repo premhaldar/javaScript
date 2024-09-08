@@ -6,7 +6,7 @@
     <title>window object</title>
 </head>
 <body>
-    <button onclick="objPrompt()">click</button>
+    <button onclick="objclose()">click</button>
     <script>
         function objAlert(){
             alert("site Under Maintence")
@@ -20,6 +20,12 @@
         function objPrompt(){
             let result=prompt("Enter Your Name");
             document.write(result);
+        }
+        function objOpen(){
+            open();
+        }
+        function objclose(){
+            close();
         }
     </script>
 </body>
