@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom with add two number</title>
+</head>
+<body>
+    <p>1st data:</p><input id="num1" type="text" placeholder="input 1st number">
+    <p>2nd data:</p><input id="num2" type="text" placeholder="input 2nd number">
+    <button onclick="add_number()">submit</button>
+    <script>
+        function add_number(){
+            let number1=document.getElementById("num1").value;
+            let number2=document.getElementById("num2").value;
+            let result=parse(number1)+parseFloat(number2);
+            alert(result);
+        }
+    </script>
+</body>
+</html>

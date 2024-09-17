@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom document</title>
+</head>
+<body>
+    <!-- <p></p>
+    <button onclick="cook()">click</button>
+    <script>
+         function cook(){
+        var Coockis=document.cookie;
+        document.getElementsByTagName("p")[0].innerHTML=Coockis;
+       }
+    </script>
+
+    <p></p>
+    <button onclick="Domain()">click</button>
+    <script>
+       function Domain(){
+        var domain_name=document.domain;
+        document.getElementsByTagName("p")[0].innerHTML=domain_name;
+       }
+    </script>
+
+<p></p>
+<button onclick="Last_modifide()">Last_modifide</button>
+<script>
+   function Last_modifide(){
+    var modifide=document.lastModified;
+    document.getElementsByTagName("p")[0].innerHTML=modifide;
+   }
+</script>
+
+<!-- Replace by DOM document -->
+ <!-- <p>if replace click the button</p>
+ <button onclick="replace()">Replace</button>
+ <script>
+    function replace(){
+        document.open('text/html','Replace');
+        document.write('<h1>hy you click replace button</h1>');
+        document.close();
+    }
+ </script><br> -->
+
+ <!-- new window with replace file -->
+  <!-- <button onclick="new_window_open()">new_window_open</button>
+  <script>
+    function new_window_open(){
+       let ok= window.open();
+       ok.document.open();
+       ok.document.write('hellow')
+       ok.document.close();
+    }
+  </script> -->
+
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+  <p>6</p>
+  <p>7</p>
+  <button onclick="count()">count</button>
+  <script>
+    function count(){
+        let My_item=document.getElementsByTagName('p');
+        let Count_element=My_item.length;
+        alert(Count_element);
+    }
+  </script>
+    
+
+</body>
+</html>
