@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <h1 id="myData"></h1>
+    <script>
+        getProductFromBackEnd();
+        async function getProductFromBackEnd(){
+
+            try {
+                let Data=document.getElementById('myData');
+                Data.innerText="loading...........";
+
+                let url="http://164.68.107.70:6060/api/v1/ReadProduct";
+                let result= await fetch(url);
+                let file= await result.json();
+                Data.innerText=JSON.stringify(file);
+            } catch (error) {
+                let Data=document.getElementById('myData');
+                Data.innerText="404 Bad Connection";
+                console.log(error);
+            }
+        }
+    </script>
+</body>
+</html>

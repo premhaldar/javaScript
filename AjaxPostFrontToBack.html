@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax front to back</title>
+</head>
+<body>
+    <!-- "ProductName": "Demo",
+        "ProductCode": "2113131",
+        "Img": "abc",
+        "UnitPrice": "12",
+        "Qty": "1",
+        "TotalPrice": "12", -->
+
+    <label for="">ProductName</label>
+    <input id="ProductName" type="text">
+
+    <label for="">ProductCode</label>
+    <input id="ProductCode" type="text">
+
+    <label for="">Img</label>
+    <input id="Img" type="text">
+
+    <label for="">UnitPrice</label>
+    <input id="UnitPrice" type="text">
+
+    <label for="">Qty</label>
+    <input id="Qty" type="text">
+
+    <label for="">TotalPrice</label>
+    <input id="TotalPrice" type="text">
+    <script>
+        async function sendDataToBackend(){
+            let ProductName= document.getElementById(ProductName).value
+            let ProductCode= document.getElementById(ProductCode).value
+            let Img= document.getElementById(Img).value
+            let UnitPrice= document.getElementById(UnitPrice).value
+            let Qty= document.getElementById(Qty).value
+            let TotalPrice= document.getElementById(TotalPrice).value
+        }
+        let DataForSend={
+            ProductName:ProductName,
+            ProductCode:ProductCode,
+            Img:Img,
+            UnitPrice:UnitPrice,
+            Qty:Qty,
+            TotalPrice:TotalPrice
+        }
+        console.log(DataForSend)
+        
+</body>
+</html>

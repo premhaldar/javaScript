@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="orderelement"></ol><br><br>
+    <input id="input_item" type="text"><br><br>
+    <button onclick="AddItem()" type="submit">submit</button>
+    <script>
+        function AddItem(){
+            let input_value=document.getElementById('input_item').value;
+            let li_item=document.createElement('li');
+            li_item.innerHTML=input_value;
+            let mainElement=document.getElementById('orderelement');
+            mainElement.appendChild(li_item);
+        }
+    </script>
+</body>
+</html>
