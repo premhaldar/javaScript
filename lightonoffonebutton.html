@@ -6,12 +6,15 @@
     <title>light on off one button</title>
 </head>
 <body>
-    <img id="Main_img" src="img/light_off.jpg" alt="light_off">
+    <img id="Main_img" src="img/light_off.jpg" alt="light_off"><br><br>
     <button onclick="play_With_light()" id="Light_switch">Light Off</button>
     <script>
         function play_With_light(){
+            
             let my_img= document.getElementById("Main_img")
             let my_button=document.getElementById("Light_switch")
+
+
             if(my_button.innerText==="Light Off"){
                 my_button.innerText="Light ON"
                 my_img.src="img/light_on.jpg"

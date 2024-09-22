@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light on off two button</title>
+</head>
+<body>
+    <img id="my_img" src="img/light_off.jpg" alt="light_off">
+    <button onclick="on()" type="button">ON</button>
+    <button onclick="off()" type="button">OFF</button>
+    <script>
+        function on(){
+            let main_img= document.getElementById("my_img")
+            main_img.src="img/light_on.jpg"
+        }
+        function off(){
+            let image=document.getElementById("my_img")
+            image.src="img/light_off.jpg"
+        }
+    </script>
+    
+</body>
+</html>
