@@ -6,48 +6,62 @@
     <title>Ajax front to back</title>
 </head>
 <body>
-    <!-- "ProductName": "Demo",
-        "ProductCode": "2113131",
-        "Img": "abc",
-        "UnitPrice": "12",
-        "Qty": "1",
-        "TotalPrice": "12", -->
-
     <label for="">ProductName</label>
     <input id="ProductName" type="text">
-
+    <br><br>
     <label for="">ProductCode</label>
     <input id="ProductCode" type="text">
-
+    <br><br>
     <label for="">Img</label>
     <input id="Img" type="text">
-
+    <br><br>
     <label for="">UnitPrice</label>
     <input id="UnitPrice" type="text">
-
+    <br><br>
     <label for="">Qty</label>
     <input id="Qty" type="text">
-
+    <br><br>
     <label for="">TotalPrice</label>
     <input id="TotalPrice" type="text">
+    <br><br>
+    <button onclick="sendDataToBackend()">submit</button>
+
+    <h1 id="myData">...</h1>
+
+
     <script>
         async function sendDataToBackend(){
-            let ProductName= document.getElementById(ProductName).value
-            let ProductCode= document.getElementById(ProductCode).value
-            let Img= document.getElementById(Img).value
-            let UnitPrice= document.getElementById(UnitPrice).value
-            let Qty= document.getElementById(Qty).value
-            let TotalPrice= document.getElementById(TotalPrice).value
-        }
-        let DataForSend={
-            ProductName:ProductName,
-            ProductCode:ProductCode,
+            let ProductName= document.getElementById('ProductName').value;
+            let ProductCode= document.getElementById('ProductCode').value;
+            let Img= document.getElementById('Img').value;
+            let UnitPrice= document.getElementById('UnitPrice').value;
+            let Qty= document.getElementById('Qty').value;
+            let TotalPrice= document.getElementById('TotalPrice').value;
+
+            let DataForSend={
+            Product_Name:ProductName,
+            Product_Code:ProductCode,
             Img:Img,
-            UnitPrice:UnitPrice,
+            Unit_Price:UnitPrice,
             Qty:Qty,
-            TotalPrice:TotalPrice
+            Total_Price:TotalPrice
         }
-        console.log(DataForSend)
+        let myData=document.getElementById("myData");
+        myData.innerText="sending......."
+
+        let url="http://164.68.107.70:6060/api/v1/CreateProduct";
+        // let MATHOD="post";
+        let response= await fetch(
+            url,
+            {
+                method:"POST",
+                headers:{"Content-Type": "application/json"},
+                body:JSON.stringify(DataForSend)})
+        let data=await response.json();
+        myData.innerText=JSON.stringify(data)
+        }
+    </script>
+        
         
 </body>
 </html>

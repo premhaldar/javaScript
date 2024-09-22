@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOm With Form</title>
+</head>
+<body>
+    <label for="">User Name</label>
+    <input id="user_name" type="text" placeholder="User name">
+    <br><br>
+    <label for="">Password</label>
+    <input id="password" type="password" placeholder="password">
+    <br><br>
+    <button onclick="myValitation()">Submit</button>
+
+    <script>
+        function myValitation(){
+            let UserName=document.getElementById('user_name').value;
+        let Password=document.getElementById('password').value
+
+        let Data={
+            User_Name:UserName,
+            Password:Password
+        }
+        alert(JSON.stringify(Data))
+        }
+    </script>
+</body>
+</html>

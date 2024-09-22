@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light on off one button</title>
+</head>
+<body>
+    <img id="Main_img" src="img/light_off.jpg" alt="light_off">
+    <button onclick="play_With_light()" id="Light_switch">Light Off</button>
+    <script>
+        function play_With_light(){
+            let my_img= document.getElementById("Main_img")
+            let my_button=document.getElementById("Light_switch")
+            if(my_button.innerText==="Light Off"){
+                my_button.innerText="Light ON"
+                my_img.src="img/light_on.jpg"
+            }
+            else{
+                my_button.innerText="Light Off"
+                my_img.src="img/light_off.jpg" 
+            }
+        }
+    </script>
+</body>
+</html>

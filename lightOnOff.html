@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="Imglights" width="300" height="300" src="img/light_off.jpg"  >
+    <button onclick="on()" type="button">ON</button>
+    <button onclick="off()" type="button">OFF</button>
+
+    <button onclick="Toggle()" id="ToggelId" type="button">Light OFF</button>
+
+    <script>
+        function Toggle(){
+            let lightOn=document.getElementById("Imglights");
+            let ToggleBTN=document.getElementById("ToggelId")
+            if (ToggleBTN.innerText==="Light OFF"){
+                ToggleBTN.innerText="Light ON"
+                lightOn.src="img/light_on.jpg"
+            }
+            else{
+                ToggleBTN.innerText="Light OFF" 
+                lightOn.src="img/light_off.jpg"
+            } 
+        }
+        function on(){
+            let lightOn=document.getElementById("Imglights");
+            lightOn.src="img/light_on.jpg"
+        }
+        function off(){
+            let lightOn=document.getElementById("Imglights");
+            lightOn.src="img/light_off.jpg"
+        }
+    </script>
+</body>
+</html>
